@@ -8,9 +8,9 @@ while (e(i)> 0.01)
     
     xr=(xl+xu)/2;
  
-    gxl= xl-2^xl;
-    gxu= xu-2^xu;
-    gxr= xr-2^xr;
+    gxl= xl-2^-xl;
+    gxu= xu-2^-xu;
+    gxr= xr-2^-xr;
     
     
     if (gxl*gxr < 0)
