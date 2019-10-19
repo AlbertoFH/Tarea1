@@ -1,21 +1,21 @@
-x=1;
-e(x)=10;
+syms x
+cf=('3*x^2-exp(x)^x')
+f=inline(cf);
+derivada=diff(cf,x);
+df=inline(derivada);
+i=1;
+e(i) = 50;
+x=2;
+n =0;
+disp('    n             xi       error')
 
-a=3*x^2-2.71828^x;
-b=6*x-2.71828^x;
+while (e(i) > 0.0001)
 
-while (e(x)> 0.001)
-    xa=x-(a/b);
-    xb=x+1-(a/b);
-    xc=x+2-(a/b);
-    xd=x+3-(a/b);
-    xe=x+4-(a/b);
-    
-    e(x)=abs(xd-xe);
-    
+n=n+1;
+x=x-f(x)/df(x);
+e(i)= abs(f(x));
+
 end
-
-
 disp(e)
 tamanio=size(e);
 ite= 1:1:tamanio(2);

@@ -1,8 +1,8 @@
 xl=9;
 xu=11;
 i=1;
-e(i)=10;
-while (e(i)> 0.01)
+e(i)=0.00001;
+while (e(i) > 0.0001)
     
     xr=(xl+xu)/2;
  
@@ -30,10 +30,11 @@ end
 
 
 disp(xr)
+
 tamanio=size(e);
 ite= 1:1:tamanio(2);
 
 figure('DefaultAxesFontSize',14)
 set(gcf,'color','white');
-plot(ite,e,'color',[0 0 1])
+plot(ite,e,'color',[1 0 0])
 grid on
